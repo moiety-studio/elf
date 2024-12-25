@@ -1,0 +1,28 @@
+{
+  "name": "11ty template",
+  "version": "0.1.0",
+  "description": "Moiety Studio 11ty project template",
+  "main": "/_source/assets/app.js",
+  "scripts": {
+    "clean": "npx del _site",
+    "serve": "eleventy --serve",
+    "start": "npm run serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Moiety Studio",
+    "email": "hello@moiety.studio",
+    "url": "https://moiety.studio"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "del-cli": "^6.0.0",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "postcss-minify": "^1.1.0"
+  }
+}
