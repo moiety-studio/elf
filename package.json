@@ -1,6 +1,6 @@
 {
-  "name": "11ty template",
-  "version": "0.1.0",
+  "name": "Elf.",
+  "version": "0.1.1",
   "description": "Moiety Studio 11ty project template",
   "main": "/_source/assets/app.js",
   "scripts": {

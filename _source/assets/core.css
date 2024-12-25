@@ -1,17 +1,17 @@
-/*
-Theme Name: Moiety Studio template
-Theme URL: https://template.com
+/*!
+Theme Name: Elf
+Theme URL: https://elf.moiety.studio
 Author : Moiety Studio
 Author URL: https://moiety.studio
-Description: Bespoke theme designed by Moiety Studio for template, 2024
-License: private
+Description: Bespoke theme designed by Moiety Studio for Elf, 2024
+License: CC BY 4.0 
 */
 
 /* Base */
 @import url("css/_config.css");
 @import url("css/basics.css");
-@import url("css/grid.css");
-@import url("css/utilities.css");
+/* @import url("css/grid.css");
+@import url("css/utilities.css"); */
 
 /* Layout */
 @import url("css/layout.css");
@@ -20,7 +20,8 @@ License: private
 
 /* Typography */
 @import url("css/typography.css");
-@import url("css/skiplink.css");
+/* @import url("css/skiplink.css"); */
 
 /* Components */
 @import url("css/navigation.css");
+@import url("css/logo.css");
