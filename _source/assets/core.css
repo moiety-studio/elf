@@ -8,20 +8,23 @@ License: CC BY 4.0
 */
 
 /* Base */
-@import url("css/_config.css");
-@import url("css/basics.css");
+@import url("css/_config");
+@import url("css/basics");
 /* @import url("css/grid.css");
 @import url("css/utilities.css"); */
 
 /* Layout */
-@import url("css/layout.css");
-@import url("css/header.css");
-@import url("css/footer.css");
+@import url("css/layout");
+@import url("css/header");
+@import url("css/footer");
 
 /* Typography */
-@import url("css/typography.css");
-/* @import url("css/skiplink.css"); */
+@import url("css/typography");
+@import url("css/skiplink");
 
 /* Components */
-@import url("css/navigation.css");
-@import url("css/logo.css");
+@import url("css/navigation");
+@import url("css/logo");
+
+/* Pages */
+@import url("css/pages/home");
