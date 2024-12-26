@@ -15,6 +15,12 @@ header.core {
         font-size: 2rem;
         font-weight: 700;
         text-decoration: none;
+
+        svg {
+            display: block;
+            max-width: 67px;
+            height: auto;
+        }
     }
 
     @media (min-width: 480px) {

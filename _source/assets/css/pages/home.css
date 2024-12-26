@@ -10,6 +10,12 @@ body.home {
         justify-content: center;
     }
 
+    main svg {
+        display: block;
+        max-width: 169px;
+        height: auto;
+    }
+
     main p {
         margin: 2.5rem 0 0;
     }
