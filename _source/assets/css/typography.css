@@ -1,0 +1,70 @@
+/*
+ * Typography
+ */
+
+/* 
+Font Name: Lattiefa Script
+Author: AEN Creative Studio
+Author URL: https://aencreativestudio.com/product/lattiefa-script
+*/
+@font-face {
+    font-family: "Lattiefa";
+    src: url("fonts/lattiefa.woff") format("woff"),
+        url("fonts/lattiefa.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+    transition: color .125s linear;
+
+    &:hover {
+        color: var(--accent);
+    }
+}
+
+h1 {
+    margin: 0 0 2rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, -0.875rem + 9.333vw, 5rem);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+h2:not(:first-child) {
+    margin-top: 2.5rem;
+}
+
+pre,
+code,
+kbd {
+    display: inline-block;
+    padding: .125em .25em;
+    border: 1px solid hsl(from var(--background) h s calc(l + 20));
+    border-radius: .25em;
+    font-family: "Courier", monospace;
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 1.25;
+    background: rgba(244, 190, 206, 0.204);
+    background: hsl(from var(--background) h s calc(l + 10));
+}
+
+pre > code {
+    padding: unset;
+    border: unset;
+    border-radius: unset;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+    background: transparent;
+}

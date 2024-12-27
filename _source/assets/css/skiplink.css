@@ -1,0 +1,19 @@
+/**
+ * Skiplinks
+ */
+
+a.skip-link {
+    display: block;
+    position: fixed;
+    left: 1em;
+    bottom: 100%;
+    padding: .25em .5em;
+    border-radius: .25em;
+}
+
+a.skip-link:focus-visible {
+    top: 1em;
+    bottom: unset;
+    color: #6D122D;
+    background: #fff;
+}

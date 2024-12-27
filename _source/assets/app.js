@@ -1,3 +1,3 @@
 /**
- * Written for template by Moiety Studio
+ * Written for Elf by Moiety Studio
  */
