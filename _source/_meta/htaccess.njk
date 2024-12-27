@@ -1,0 +1,12 @@
+---
+permalink: .htaccess
+---
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+
+# block “AI” bots
+RewriteCond %{HTTP_USER_AGENT} ({{ bots | join("|") }}) [NC]
+RewriteRule ^ – [F]
+</IfModule>
