@@ -5,3 +5,9 @@ a.logo {
     color: inherit;
     text-decoration: none;
 }
+
+a.logo svg,
+svg.logo {
+    display: block;
+    height: auto;
+}
