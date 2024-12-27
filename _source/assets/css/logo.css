@@ -1,19 +1,6 @@
 /**
  * Logo
  */
-.logo {
-    font-family: "Lattiefa", sans-serif;
-
-    &::first-letter {
-        font-feature-settings: "titl";
-    }
-
-    span {
-        color: var(--accent);
-        font-weight: 700;
-    }
-}
-
 a.logo {
     color: inherit;
     text-decoration: none;

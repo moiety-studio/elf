@@ -2,19 +2,6 @@
  * Typography
  */
 
-/* 
-Font Name: Lattiefa Script
-Author: AEN Creative Studio
-Author URL: https://aencreativestudio.com/product/lattiefa-script
-*/
-@font-face {
-    font-family: "Lattiefa";
-    src: url("fonts/lattiefa.woff") format("woff"),
-        url("fonts/lattiefa.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-}
-
 a {
     color: inherit;
     transition: color .125s linear;
