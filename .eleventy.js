@@ -48,7 +48,6 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("_source/assets/fonts/")
     eleventyConfig.addPassthroughCopy("_source/assets/app.js")
     eleventyConfig.addPassthroughCopy("_source/assets/core.css")
-    eleventyConfig.addPassthroughCopy({"_source/_meta/robots.txt": "/"})
 
     // 11ty Settings --------------------
     return {

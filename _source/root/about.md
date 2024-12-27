@@ -16,6 +16,10 @@ Elf was built with accessibility in mind. It uses semantic HTML, has contrasting
 
 - CSS is minimised (with the help of [postcss-minify](https://www.npmjs.com/package/postcss-minify))
 
+## Security
+
+- AI scraping is hindered via `robots.txt` and  a `.htaccess` file.
+
 ## Development standards
 
 - [SemVer](https://semver.org) is used for versioning
