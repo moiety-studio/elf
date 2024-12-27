@@ -10,6 +10,12 @@ nav.core {
         position: relative;
         text-decoration: none;
 
+        svg {
+            width: 1.17ex;
+            height: 1.17ex;
+            fill: currentcolor;
+        }
+
         &::before {
             --scale-x: 0;
             content: "";
