@@ -1,4 +1,7 @@
 {
-  "title": "Elf.",
+  "title": {
+    "short": "Elf.",
+    "long": "Elf. an 11ty project template"
+  },
   "description": "Elf is an 11ty project template to help you start your next 11ty project with ease."
 }

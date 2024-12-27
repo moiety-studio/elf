@@ -48,3 +48,14 @@ Useful [front matter](https://www.11ty.dev/docs/data-frontmatter/) attributes:
 - `title` sets the `<title>`-element value and is used to provide a page title
 - `layout` choose one of layouts from `_includes/layouts`
 - `permalink` can be used to override what people see in the address bar; for example `permalink: "documentation/"` will result in `https://elf.moiety.studio/documentation`
+
+## Site settings
+
+<!-- TODO: move to it’s own page? -->
+
+There are a few settings you change to personalise the project:
+
+- `_source/_data/globals.json` contains some variables you can set
+    - `title.short` provides (part of) the `<title>`-element
+    - `title.long` provides the `<title>`-element if no page title (ie. from the markdown file) is provided
+    - `description` is used to set the value for `<meta name="description">`

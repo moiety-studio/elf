@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if title %}
-    <title>{{ title }} - Elf</title>
+    <title>{{ title }} - {{ globals.title.short }}</title>
     {% else %}
-    <title>Elf. an 11ty project template</title>
+    <title>{{ globals.title.long }}</title>
     {% endif %}
     <meta name="description" content="{{ globals.description }}">
     <link rel="stylesheet" href="/assets/core.css">
