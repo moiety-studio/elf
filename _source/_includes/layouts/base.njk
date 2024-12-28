@@ -9,12 +9,13 @@
     <title>{{ globals.title.long }}</title>
     {% endif %}
     <meta name="description" content="{{ globals.description }}">
-    <link rel="stylesheet" href="/assets/core.css">
+    <link rel="stylesheet" href="/assets/core.min.css">
     <link rel="icon" href="/assets/icons/favicon.svg">
 </head>
 <body class="{{ classNames }}">
     {% include "partials/header.njk" %}
     {{ content | safe }}
     {% include "partials/footer.njk" %}
+    <script src="/assets/app.min.js" module></script>
 </body>
 </html>

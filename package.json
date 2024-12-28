@@ -23,6 +23,7 @@
     "del-cli": "^6.0.0",
     "postcss": "^8.4.49",
     "postcss-import": "^16.1.0",
-    "postcss-minify": "^1.1.0"
+    "postcss-minify": "^1.1.0",
+    "terser": "^5.37.0"
   }
 }
