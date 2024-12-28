@@ -1,6 +1,6 @@
 {
   "name": "Elf.",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Elf is an 11ty project template to help you start your next 11ty project with ease.",
   "main": "/_source/assets/app.js",
   "scripts": {
