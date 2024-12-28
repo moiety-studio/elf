@@ -7,6 +7,12 @@
     --accent: #F4BECE;
     --background: #222C36;
 
+
+    /* Light Mode */
+    --accent: hsl(342, 71%, 50%);
+    --copy-color: #222C36;
+    --background: #fff;
+
     /* Sizes */
 }
 

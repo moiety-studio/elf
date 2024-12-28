@@ -5,7 +5,8 @@
 footer.core {
     margin-top: 8rem;
     margin-bottom: 2.5rem;
-    color: #ddd;
+    color: hsl(0, 0%, 87%);
+    color: var(--copy-color);
     font-size: 1rem;
 }
 
