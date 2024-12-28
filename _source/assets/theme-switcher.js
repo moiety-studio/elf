@@ -65,7 +65,7 @@ export default class ThemeSwitcher {
     createCircles(theme) {
         const span = document.createElement("span")
         const container = span.cloneNode()
-        container.setAttribute("data-user-theme", theme)
+        container.setAttribute("data-selected-theme", theme)
         container.append(span.cloneNode(), span.cloneNode())
         return container
     }

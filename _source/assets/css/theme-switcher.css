@@ -28,7 +28,7 @@
             border-radius: 0 .25em .25em 0;
         }
 
-        [data-user-theme] {
+        [data-selected-theme] {
             display: flex;
             margin-left: .25em;
 
@@ -50,7 +50,7 @@
             }
         }
 
-        &[data-theme=reset] [data-user-theme] {
+        &[data-theme=reset] [data-selected-theme] {
             display: none;
         }
     }

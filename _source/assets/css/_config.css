@@ -3,8 +3,7 @@
  */
 
 :root,
-[data-selected-theme="dark"],
-[data-user-theme="dark"] {
+[data-selected-theme="dark"] {
     /* Colours */
     --accent: #F4BECE;
     --copy-color: #fff;
@@ -17,15 +16,13 @@
     /* Sizes */
 }
 
-[data-selected-theme="light"],
-[data-user-theme="light"] {
+[data-selected-theme="light"] {
     --accent: hsl(342, 71%, 50%);
     --copy-color: #222C36;
     --background: #fff;
 }
 
-[data-selected-theme="aurora"],
-[data-user-theme="aurora"] {
+[data-selected-theme="aurora"] {
     --accent: #ABF4B2;
     --copy-color: #E5F1F4;
     --background: #132427;
