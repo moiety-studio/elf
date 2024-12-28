@@ -56,7 +56,9 @@ export default class ThemeSwitcher {
         button.setAttribute("data-theme", theme)
         button.innerText = theme
         button.append(circles)
-        button.addEventListener("click", this.buttonClickHandler.bind(this))
+        button.addEventListener("click", (event) => { 
+            this.buttonClickHandler(event, button)
+        })
         return button
     }
     
@@ -68,8 +70,7 @@ export default class ThemeSwitcher {
         return container
     }
     
-    buttonClickHandler(event) {
-        const button = event.target
+    buttonClickHandler(event, button) {
         const theme = button.getAttribute("data-theme")
         this.#resetButtonStates()
         if (theme === "reset") {
