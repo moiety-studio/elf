@@ -2,18 +2,33 @@
  * Config
  */
 
-:root {
+:root,
+[data-selected-theme="dark"],
+[data-user-theme="dark"] {
     /* Colours */
     --accent: #F4BECE;
+    --copy-color: #fff;
     --background: #222C36;
 
+    --button-color: var(--copy-color);
+    --button-background: hsl(from var(--background) h s calc(l + 10));
+    --button-border-color: rgba(0, 0, 0, .5);
 
-    /* Light Mode */
+    /* Sizes */
+}
+
+[data-selected-theme="light"],
+[data-user-theme="light"] {
     --accent: hsl(342, 71%, 50%);
     --copy-color: #222C36;
     --background: #fff;
+}
 
-    /* Sizes */
+[data-selected-theme="aurora"],
+[data-user-theme="aurora"] {
+    --accent: #ABF4B2;
+    --copy-color: #E5F1F4;
+    --background: #132427;
 }
 
 /** Grid Variables */
