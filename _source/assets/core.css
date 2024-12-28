@@ -10,8 +10,7 @@ License: CC BY 4.0
 /* Base */
 @import url("css/_config");
 @import url("css/basics");
-/* @import url("css/grid.css");
-@import url("css/utilities.css"); */
+@import url("css/utilities");
 
 /* Layout */
 @import url("css/layout");
