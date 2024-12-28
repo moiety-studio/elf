@@ -2,6 +2,7 @@ import { EleventyI18nPlugin } from "@11ty/eleventy"
 import postcss from "postcss"
 import postcssImport from "postcss-import"
 import postcssMinify from "postcss-minify"
+import { minify } from "terser"
 
 export default function(eleventyConfig) {
     // Filters --------------------------
@@ -16,11 +17,28 @@ export default function(eleventyConfig) {
     eleventyConfig.addFilter("externalLink", (url) => {
         return url.match(/\/*/)[0] != '/'
     })
+    
+    // JS processing --------------------
+    eleventyConfig.addTemplateFormats("js")
+    eleventyConfig.addExtension("js", {
+        outputFileExtension: "min.js",
+        compile: async (content, path) => {
+            if (path !== './_source/assets/app.js') {
+                return
+            }
+            
+            return async () => {
+                let output = await minify(content, {})
+                
+                return  output.code
+            }
+        }
+    })
 
     // CSS processing -------------------
     eleventyConfig.addTemplateFormats("css")
     eleventyConfig.addExtension("css", {
-        outputFileExtension: "css",
+        outputFileExtension: "min.css",
         compile: async (content, path) => {
             if (path !== './_source/assets/core.css') {
                 return
@@ -46,8 +64,6 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("_source/assets/icons/")
     eleventyConfig.addPassthroughCopy("_source/assets/images/")
     eleventyConfig.addPassthroughCopy("_source/assets/fonts/")
-    eleventyConfig.addPassthroughCopy("_source/assets/app.js")
-    eleventyConfig.addPassthroughCopy("_source/assets/core.css")
 
     // 11ty Settings --------------------
     return {
