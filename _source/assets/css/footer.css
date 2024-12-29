@@ -3,12 +3,20 @@
  */
 
 footer.core {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 1.5em;
     margin-top: 8rem;
     margin-bottom: 2.5rem;
-    color: #ddd;
+    color: hsl(0, 0%, 87%);
+    color: var(--copy-color);
     font-size: 1rem;
-}
 
+    p {
+        margin: 0;
+    }
+}
 
 /** Extra: Moiety */
 footer.core [href="https://moiety.studio"] {

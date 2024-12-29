@@ -23,10 +23,6 @@ export default function(eleventyConfig) {
     eleventyConfig.addExtension("js", {
         outputFileExtension: "min.js",
         compile: async (content, path) => {
-            if (path !== './_source/assets/app.js') {
-                return
-            }
-            
             return async () => {
                 let output = await minify(content, {})
                 

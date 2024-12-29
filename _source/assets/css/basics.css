@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto 1fr auto;
-    color: #fff;
+    color: var(--copy-color);
     font-family: "Brendon Text", "Helvetica Neue", sans-serif;
     line-height: 1.5;
     font-size: 1.25rem;

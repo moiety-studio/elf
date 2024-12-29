@@ -4,10 +4,10 @@
 nav.core {
     display: flex;
     gap: 2.5rem;
-    color: var(--accent);
 
     a {
         position: relative;
+        color: var(--accent);
         text-decoration: none;
 
         svg {
@@ -29,7 +29,7 @@ nav.core {
             transition-property: transform;
             transition-timing-function: cubic-bezier(.4, 0, .2, 1);
             transition-duration: .2s;
-            background-color: #fff;
+            background-color: var(--copy-color);
         }
 
         &:hover::before {
