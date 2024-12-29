@@ -53,6 +53,7 @@ export default class ThemeSwitcher {
     createButton(theme) {
         const circles = this.createCircles(theme)
         const button = document.createElement("button")
+        button.setAttribute("type", "button")
         button.setAttribute("data-theme", theme)
         button.innerText = theme
         button.append(circles)
@@ -97,11 +98,23 @@ export default class ThemeSwitcher {
         if (save) {
             localStorage.setItem('selected-theme', theme);
         }
+        this.#initButtonState(theme)
     }
     
     resetTheme() {
         localStorage.removeItem('selected-theme')
         this.setInitialTheme()
+    }
+    
+    #initButtonState(theme) {
+        this.#resetButtonStates()
+
+        for (let button of this.#buttons) {
+            if (button?.dataset.theme === theme) {
+                this.#setButtonState(button, "true")
+                return
+            }
+        }
     }
     
     #setButtonState(button, state) {
