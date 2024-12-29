@@ -107,14 +107,14 @@ export default class ThemeSwitcher {
     }
     
     #initButtonState(theme) {
+        this.#resetButtonStates()
+
         for (let button of this.#buttons) {
-            if (button?.dataset.theme != theme) {
+            if (button?.dataset.theme === theme) {
+                this.#setButtonState(button, "true")
                 return
             }
-            
-            this.#setButtonState(button, "true")
         }
-        
     }
     
     #setButtonState(button, state) {
