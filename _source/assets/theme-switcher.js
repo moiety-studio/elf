@@ -98,11 +98,23 @@ export default class ThemeSwitcher {
         if (save) {
             localStorage.setItem('selected-theme', theme);
         }
+        this.#initButtonState(theme)
     }
     
     resetTheme() {
         localStorage.removeItem('selected-theme')
         this.setInitialTheme()
+    }
+    
+    #initButtonState(theme) {
+        for (let button of this.#buttons) {
+            if (button?.dataset.theme != theme) {
+                return
+            }
+            
+            this.#setButtonState(button, "true")
+        }
+        
     }
     
     #setButtonState(button, state) {
