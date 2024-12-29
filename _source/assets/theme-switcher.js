@@ -53,6 +53,7 @@ export default class ThemeSwitcher {
     createButton(theme) {
         const circles = this.createCircles(theme)
         const button = document.createElement("button")
+        button.setAttribute("type", "button")
         button.setAttribute("data-theme", theme)
         button.innerText = theme
         button.append(circles)
