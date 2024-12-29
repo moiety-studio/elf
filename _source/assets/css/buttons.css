@@ -19,6 +19,14 @@ button {
         background: var(--button-hover-background);
     }
 
+    &:focus-visible {
+        /* Note:
+         * this places the outline above surrounding elements.
+         * you should remove this if you’re experiencing issues.
+         */
+        z-index: 1;
+    }
+
     &:active {
         background: var(--button-active-background);
     }
