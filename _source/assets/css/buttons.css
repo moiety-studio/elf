@@ -1,0 +1,46 @@
+/*
+ * Buttons
+ */
+
+button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .25em .5em;
+    border: 1px solid var(--button-border-color);
+    border-radius: .25em;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--button-color);
+    background: var(--button-background);
+
+    &:hover,
+    &:focus-visible {
+        background: var(--button-hover-background);
+    }
+
+    &:active {
+        background: var(--button-active-background);
+    }
+
+    &::before {
+        --scale-x: 0;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        transform-origin: 50% 50%;
+        transform: scaleX(var(--scale-x)) scaleY(1);
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+        transition-duration: .2s;
+        background-color: var(--accent);
+        border-radius: inherit;
+    }
+
+    &[aria-pressed="true"]::before {
+        --scale-x: 1;
+    }
+}

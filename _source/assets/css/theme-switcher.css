@@ -7,14 +7,7 @@
     margin: -.25em 0;
 
     button {
-        display: flex;
-        align-items: center;
-        padding: .25em .5em;
-        border: 1px solid var(--button-border-color);
-        font-family: inherit;
-        font-size: inherit;
-        color: var(--button-color);
-        background: var(--button-background);
+        border-radius: 0;
 
         & + button {
             border-left: 0;

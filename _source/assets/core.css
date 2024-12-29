@@ -22,6 +22,7 @@ License: CC BY 4.0
 @import url("css/skiplink");
 
 /* Components */
+@import url("css/buttons");
 @import url("css/navigation");
 @import url("css/logo");
 @import url("css/theme-switcher");

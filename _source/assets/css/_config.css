@@ -13,6 +13,9 @@
     --button-background: hsl(from var(--background) h s calc(l + 10));
     --button-border-color: rgba(0, 0, 0, .5);
 
+    --button-hover-background: hsl(from var(--button-background) h s calc(l + 5));
+    --button-active-background: hsl(from var(--button-background) h s calc(l - 5));
+
     /* Sizes */
 }
 
@@ -20,6 +23,9 @@
     --accent: hsl(342, 71%, 50%);
     --copy-color: #222C36;
     --background: #fff;
+
+    --button-hover-background: hsl(from var(--background) h s calc(l - 5));
+    --button-active-background: hsl(from var(--background) h s calc(l - 10));
 }
 
 [data-selected-theme="aurora"] {
