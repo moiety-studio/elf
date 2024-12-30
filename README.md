@@ -12,3 +12,13 @@ Note: You’ll need [node](https://nodejs.org/en/download/package-manager) versi
 2. navigate into the folder (ex: `cd elf`)
 3. install the required materials: `npm install`
 4. run the project: `npm start`
+
+## Credits 
+
+This project is maintained by [Zoë Bijl](https://moiety.me). She would like to thank the following people for their work on projects that inspired her:
+
+- [Alice Boxhall](https://github.com/alice) for her help with JavaScript
+- [Scott Evans](https://scott.ee/) for their work on [Elva](https://github.com/scottsweb/elva)
+- [Sarah L. Fossheim](https://fossheim.io/) for their work on the [theme switcher](https://github.com/sarahfossheim/theme-switcher)
+- [Melanie Richards](https://melanie-richards.com/) for having a good website with good birds
+- [Miriam Suzanne](https://www.miriamsuzanne.com/) for her help with CSS
