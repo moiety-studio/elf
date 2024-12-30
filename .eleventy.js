@@ -1,4 +1,4 @@
-import { EleventyI18nPlugin } from "@11ty/eleventy"
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation"
 import postcss from "postcss"
 import postcssImport from "postcss-import"
 import postcssMinify from "postcss-minify"
@@ -17,6 +17,9 @@ export default function(eleventyConfig) {
     eleventyConfig.addFilter("externalLink", (url) => {
         return url.match(/\/*/)[0] != '/'
     })
+    
+    // Plugins --------------------------
+    eleventyConfig.addPlugin(eleventyNavigationPlugin)
     
     // JS processing --------------------
     eleventyConfig.addTemplateFormats("js")
