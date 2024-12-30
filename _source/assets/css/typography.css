@@ -33,26 +33,24 @@ code,
 kbd {
     display: inline-block;
     padding: .125em .25em;
-    border: 1px solid hsl(from var(--background) h s calc(l + 20));
+    border: 1px solid var(--code-border-color);
     border-radius: .25em;
     font-family: "Courier", monospace;
     font-size: .9em;
     font-weight: 700;
     line-height: 1.25;
-    background: rgba(244, 190, 206, 0.204);
-    background: hsl(from var(--background) h s calc(l + 10));
+    background: var(--code-background);
     word-break: break-word;
 }
 
 pre {
-    --pre-background: hsl(from var(--background) h s calc(l + 10));
     display: block;
     max-width: 100%;
     overflow-x: auto;
     background:
         /* Shadow covers */
-        linear-gradient(to right, var(--pre-background) 25%, rgba(245, 245, 245, 0)),
-        linear-gradient(to left, var(--pre-background) 25%, rgba(245, 245, 245, 0)) 100% 0,
+        linear-gradient(to right, var(--code-background) 25%, rgba(245, 245, 245, 0)),
+        linear-gradient(to left, var(--code-background) 25%, rgba(245, 245, 245, 0)) 100% 0,
 
         /* Shadows */
         linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
@@ -68,8 +66,7 @@ pre {
         scroll,
         scroll;
     background-repeat: no-repeat;
-    background-color: rgba(244, 190, 206, 0.204);
-    background-color: var(--pre-background);
+    background-color: var(--code-background);
 }
 
 pre > code {
