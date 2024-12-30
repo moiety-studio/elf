@@ -2,6 +2,8 @@
 title: Documentation
 permalink: documentation/
 layout: "layouts/main.njk"
+eleventyNavigation:
+  key: Documentation
 ---
 # Documentation
 
