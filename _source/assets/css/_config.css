@@ -16,6 +16,9 @@
     --button-hover-background: hsl(from var(--button-background) h s calc(l + 5));
     --button-active-background: hsl(from var(--button-background) h s calc(l - 5));
 
+    --code-border-color: hsl(from var(--background) h s calc(l + 20));
+    --code-background: hsl(from var(--background) h s calc(l + 10));
+
     /* Sizes */
 }
 
@@ -26,6 +29,9 @@
 
     --button-hover-background: hsl(from var(--background) h s calc(l - 5));
     --button-active-background: hsl(from var(--background) h s calc(l - 10));
+
+    --code-border-color: hsl(from var(--background) h s calc(l - 30));
+    --code-background: hsl(from var(--background) h s calc(l - 10));
 }
 
 [data-selected-theme="aurora"] {
