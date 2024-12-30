@@ -1,4 +1,3 @@
-import { EleventyI18nPlugin } from "@11ty/eleventy"
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation"
 import postcss from "postcss"
 import postcssImport from "postcss-import"
