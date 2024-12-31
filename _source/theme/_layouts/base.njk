@@ -11,6 +11,12 @@
             <title>{{ globals.title.long }}</title>
         {% endif %}
         <meta name="description" content="{{ globals.description }}" />
+        <link
+            rel="alternate"
+            href="/feed.xml"
+            title="{{ globals.title.long }}"
+            type="application/rss+xml"
+        />
         <link rel="stylesheet" href="/assets/core.min.css" />
         <link rel="icon" href="/assets/icons/favicon.svg" />
         <script src="/assets/inline.min.js"></script>

@@ -1,4 +1,5 @@
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation"
+import { feedPlugin } from "@11ty/eleventy-plugin-rss"
 import postcss from "postcss"
 import postcssImport from "postcss-import"
 import postcssMinify from "postcss-minify"
@@ -20,7 +21,24 @@ export default function (eleventyConfig) {
 
     // Plugins --------------------------
     eleventyConfig.addPlugin(eleventyNavigationPlugin)
-
+    eleventyConfig.addPlugin(feedPlugin, {
+        type: "rss", // one of: "atom", "rss", "json"
+        outputPath: "/feed.xml",
+        collection: {
+            name: "posts", // iterate over `collections.posts`
+            limit: 10,     // 0 means no limit
+        },
+        metadata: {
+            language: "en",
+            title: "Elf",
+            subtitle: "Elf is an 11ty project template to help you start your next 11ty project with ease.",
+            base: "https://elf.moiety.studio/",
+            author: {
+                name: "Moiety Studio"
+            }
+        }
+    })
+    
     // JS processing --------------------
     eleventyConfig.addTemplateFormats("js")
     eleventyConfig.addExtension("js", {
