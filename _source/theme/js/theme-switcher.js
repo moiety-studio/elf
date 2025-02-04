@@ -95,10 +95,27 @@ export default class ThemeSwitcher {
 
     setTheme(theme, save) {
         const html = document.querySelector("html")
+        const metaColor = document.querySelector("meta[name=theme-color]")
+        const metaScheme = document.querySelector("meta[name=color-scheme]")
+        let color, scheme
         html.setAttribute("data-selected-theme", theme)
         if (save) {
             localStorage.setItem("selected-theme", theme)
         }
+        if (theme === "light") {
+            color = "#ffffff"
+            scheme = "light"
+        }
+        if (theme === "dark") {
+            color = "#26222e"
+            scheme = "dark"
+        }
+        if (theme === "aurora") {
+            color = "#132427"
+            scheme = "dark"
+        }
+        metaColor.setAttribute("content", color)
+        metaScheme.setAttribute("content", scheme)
         this.#initButtonState(theme)
     }
 
