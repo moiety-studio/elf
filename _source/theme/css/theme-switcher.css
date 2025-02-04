@@ -43,7 +43,7 @@
             }
         }
 
-        &[data-theme="reset"] [data-selected-theme] {
+        &[data-theme="system"] [data-selected-theme] {
             display: none;
         }
     }

@@ -46,7 +46,7 @@ export default class ThemeSwitcher {
         for (let theme in this.themes) {
             buttons.push(this.createButton(this.themes[theme]))
         }
-        const resetButton = this.createButton("reset")
+        const resetButton = this.createButton("system")
         buttons.push(resetButton)
         return buttons
     }
@@ -75,7 +75,7 @@ export default class ThemeSwitcher {
     buttonClickHandler(event, button) {
         const theme = button.getAttribute("data-theme")
         this.#resetButtonStates()
-        if (theme === "reset") {
+        if (theme === "system") {
             this.resetTheme()
             return
         }
