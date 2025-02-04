@@ -19,12 +19,13 @@ footer.core {
 }
 
 /** Extra: Moiety */
-footer.core [href="https://moiety.studio"] {
+footer.core [href="https://moiety.studio"]
+{
     display: inline-block;
     padding-right: 1.125em;
     position: relative;
     text-decoration: none;
-    transition: cubic-bezier(.215, .61, .35, 1) .2s;
+    transition: cubic-bezier(0.215, 0.61, 0.35, 1) 0.2s;
     transition-property: color, padding;
 
     &::before {
@@ -35,7 +36,7 @@ footer.core [href="https://moiety.studio"] {
         content: "→";
         vertical-align: center;
         color: transparent;
-        transition: color cubic-bezier(.215, .61, .35, 1) .1s;
+        transition: color cubic-bezier(0.215, 0.61, 0.35, 1) 0.1s;
         transform: translateY(-50%);
     }
 

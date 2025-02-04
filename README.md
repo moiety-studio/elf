@@ -13,7 +13,7 @@ Note: You’ll need [node](https://nodejs.org/en/download/package-manager) versi
 3. install the required materials: `npm install`
 4. run the project: `npm start`
 
-## Credits 
+## Credits
 
 This project is maintained by [Zoë Bijl](https://moiety.me). She would like to thank the following people for their work on projects that inspired her:
 

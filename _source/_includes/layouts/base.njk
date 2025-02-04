@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="{{ eleventy.generator }}">
-    <link rel="preload" href="/assets/inline.min.js" as="script" />
-    {% if title %}
-    <title>{{ title }} - {{ globals.title.short }}</title>
-    {% else %}
-    <title>{{ globals.title.long }}</title>
-    {% endif %}
-    <meta name="description" content="{{ globals.description }}">
-    <link rel="stylesheet" href="/assets/core.min.css">
-    <link rel="icon" href="/assets/icons/favicon.svg">
-    <script src="/assets/inline.min.js"></script>
-</head>
-<body class="{{ classNames }}">
-    {% include "partials/header.njk" %}
-    {{ content | safe }}
-    {% include "partials/footer.njk" %}
-    <script src="/assets/app.min.js" type="module"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="{{ eleventy.generator }}" />
+        <link rel="preload" href="/assets/inline.min.js" as="script" />
+        {% if title %}
+            <title>{{ title }} - {{ globals.title.short }}</title>
+        {% else %}
+            <title>{{ globals.title.long }}</title>
+        {% endif %}
+        <meta name="description" content="{{ globals.description }}" />
+        <link rel="stylesheet" href="/assets/core.min.css" />
+        <link rel="icon" href="/assets/icons/favicon.svg" />
+        <script src="/assets/inline.min.js"></script>
+    </head>
+    <body class="{{ classNames }}">
+        {% include "partials/header.njk" %}
+        {{ content | safe }}
+        {% include "partials/footer.njk" %}
+        <script src="/assets/app.min.js" type="module"></script>
+    </body>
 </html>

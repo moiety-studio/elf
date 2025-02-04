@@ -8,7 +8,7 @@ export default class ThemeSwitcher {
     target
     themes
     #buttons
-    
+
     constructor(settings) {
         this.settings = settings
         this.target = this.setTarget(this.settings.target)
@@ -21,25 +21,26 @@ export default class ThemeSwitcher {
         this.setInitialTheme()
         this.bindListeners()
     }
-    
+
     bindListeners() {
-        window.matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener('change', () => {
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", () => {
                 this.setInitialTheme()
             })
     }
-    
+
     setTarget(target) {
         return document.querySelector(target)
     }
-    
+
     createContainer() {
         const container = document.createElement("section")
         container.className = this.settings.class
         container.setAttribute("aria-label", this.settings.label)
         return container
     }
-    
+
     createButtons() {
         const buttons = []
         for (let theme in this.themes) {
@@ -49,7 +50,7 @@ export default class ThemeSwitcher {
         buttons.push(resetButton)
         return buttons
     }
-    
+
     createButton(theme) {
         const circles = this.createCircles(theme)
         const button = document.createElement("button")
@@ -57,12 +58,12 @@ export default class ThemeSwitcher {
         button.setAttribute("data-theme", theme)
         button.innerText = theme
         button.append(circles)
-        button.addEventListener("click", (event) => { 
+        button.addEventListener("click", (event) => {
             this.buttonClickHandler(event, button)
         })
         return button
     }
-    
+
     createCircles(theme) {
         const span = document.createElement("span")
         const container = span.cloneNode()
@@ -70,7 +71,7 @@ export default class ThemeSwitcher {
         container.append(span.cloneNode(), span.cloneNode())
         return container
     }
-    
+
     buttonClickHandler(event, button) {
         const theme = button.getAttribute("data-theme")
         this.#resetButtonStates()
@@ -81,31 +82,31 @@ export default class ThemeSwitcher {
         this.setTheme(theme, true)
         this.#setButtonState(button, "true")
     }
-    
+
     appendButtons() {
         for (let button in this.#buttons) {
             this.container.append(this.#buttons[button])
         }
     }
-    
+
     appendContainer() {
         this.target.append(this.container)
     }
-    
+
     setTheme(theme, save) {
         const html = document.querySelector("html")
         html.setAttribute("data-selected-theme", theme)
         if (save) {
-            localStorage.setItem('selected-theme', theme);
+            localStorage.setItem("selected-theme", theme)
         }
         this.#initButtonState(theme)
     }
-    
+
     resetTheme() {
-        localStorage.removeItem('selected-theme')
+        localStorage.removeItem("selected-theme")
         this.setInitialTheme()
     }
-    
+
     #initButtonState(theme) {
         this.#resetButtonStates()
 
@@ -116,21 +117,25 @@ export default class ThemeSwitcher {
             }
         }
     }
-    
+
     #setButtonState(button, state) {
         button.setAttribute("aria-pressed", state)
     }
-    
+
     #resetButtonStates() {
         for (let button of this.#buttons) {
             this.#setButtonState(button, "false")
         }
     }
-    
+
     setInitialTheme() {
-        const saved = localStorage.getItem('selected-theme')
-        const prefersDarkColorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        const prefersLightColorScheme = window.matchMedia("(prefers-color-scheme: light)").matches
+        const saved = localStorage.getItem("selected-theme")
+        const prefersDarkColorScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches
+        const prefersLightColorScheme = window.matchMedia(
+            "(prefers-color-scheme: light)"
+        ).matches
 
         if (saved) {
             this.setTheme(saved)
@@ -140,7 +145,7 @@ export default class ThemeSwitcher {
         if (prefersDarkColorScheme) {
             this.setTheme("dark")
         }
-        
+
         if (prefersLightColorScheme) {
             this.setTheme("light")
         }

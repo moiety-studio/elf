@@ -5,16 +5,20 @@
 :root,
 [data-selected-theme="dark"] {
     /* Colours */
-    --accent: #F4BECE;
+    --accent: #f4bece;
     --copy-color: #fff;
-    --background: #222C36;
+    --background: #222c36;
 
     --button-color: var(--copy-color);
     --button-background: hsl(from var(--background) h s calc(l + 10));
-    --button-border-color: rgba(0, 0, 0, .5);
+    --button-border-color: rgba(0, 0, 0, 0.5);
 
-    --button-hover-background: hsl(from var(--button-background) h s calc(l + 5));
-    --button-active-background: hsl(from var(--button-background) h s calc(l - 5));
+    --button-hover-background: hsl(
+        from var(--button-background) h s calc(l + 5)
+    );
+    --button-active-background: hsl(
+        from var(--button-background) h s calc(l - 5)
+    );
 
     --code-border-color: hsl(from var(--background) h s calc(l + 20));
     --code-background: hsl(from var(--background) h s calc(l + 10));
@@ -24,7 +28,7 @@
 
 [data-selected-theme="light"] {
     --accent: hsl(342, 71%, 50%);
-    --copy-color: #222C36;
+    --copy-color: #222c36;
     --background: #fff;
 
     --button-hover-background: hsl(from var(--background) h s calc(l - 5));
@@ -35,10 +39,11 @@
 }
 
 [data-selected-theme="aurora"] {
-    --accent: #ABF4B2;
-    --copy-color: #E5F1F4;
+    --accent: #abf4b2;
+    --copy-color: #e5f1f4;
     --background: #132427;
 }
 
 /** Grid Variables */
-:root {}
+:root {
+}

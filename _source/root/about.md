@@ -3,7 +3,7 @@ title: About
 permalink: about/
 layout: "layouts/main.njk"
 eleventyNavigation:
-  key: About
+    key: About
 ---
 
 # About
@@ -20,7 +20,7 @@ Elf was built with accessibility in mind. It uses semantic HTML, has contrasting
 
 ## Security
 
-- AI scraping is hindered via `robots.txt` and  a `.htaccess` file.
+- AI scraping is hindered via `robots.txt` and a `.htaccess` file.
 
 ## Development standards
 

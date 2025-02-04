@@ -6,11 +6,7 @@ import ThemeSwitcher from "./theme-switcher.min.js"
 
 // Theme switcher
 const themeSwitcherSettings = {
-    themes: [
-        'dark',
-        'light',
-        'aurora'
-    ],
+    themes: ["dark", "light", "aurora"],
     target: "footer.core",
     class: "theme-switcher",
     label: "Pick a theme"

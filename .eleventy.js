@@ -4,23 +4,23 @@ import postcssImport from "postcss-import"
 import postcssMinify from "postcss-minify"
 import { minify } from "terser"
 
-export default function(eleventyConfig) {
+export default function (eleventyConfig) {
     // Filters --------------------------
     eleventyConfig.addFilter("sortCollectionByFilename", (c) => {
         return c.sort((a, b) => {
-            const aNum = parseInt(a.fileSlug.split('-')[0])
-            const bNum = parseInt(b.fileSlug.split('-')[0])
+            const aNum = parseInt(a.fileSlug.split("-")[0])
+            const bNum = parseInt(b.fileSlug.split("-")[0])
             return aNum - bNum
         })
     })
-    
+
     eleventyConfig.addFilter("externalLink", (url) => {
-        return url.match(/\/*/)[0] != '/'
+        return url.match(/\/*/)[0] != "/"
     })
-    
+
     // Plugins --------------------------
     eleventyConfig.addPlugin(eleventyNavigationPlugin)
-    
+
     // JS processing --------------------
     eleventyConfig.addTemplateFormats("js")
     eleventyConfig.addExtension("js", {
@@ -28,8 +28,8 @@ export default function(eleventyConfig) {
         compile: async (content, path) => {
             return async () => {
                 let output = await minify(content, {})
-                
-                return  output.code
+
+                return output.code
             }
         }
     })
@@ -39,16 +39,16 @@ export default function(eleventyConfig) {
     eleventyConfig.addExtension("css", {
         outputFileExtension: "min.css",
         compile: async (content, path) => {
-            if (path !== './_source/assets/core.css') {
+            if (path !== "./_source/assets/core.css") {
                 return
             }
 
             return async () => {
                 let output = await postcss([
-          postcssImport,
-          postcssMinify
-        ]).process(content, {
-                    from: path,
+                    postcssImport,
+                    postcssMinify
+                ]).process(content, {
+                    from: path
                 })
 
                 return output.css
@@ -69,7 +69,7 @@ export default function(eleventyConfig) {
         dir: {
             input: "_source"
         },
-        dataTemplateEngine: 'njk',
-        markdownTemplateEngine: 'njk'
+        dataTemplateEngine: "njk",
+        markdownTemplateEngine: "njk"
     }
 }

@@ -3,8 +3,9 @@ title: Documentation
 permalink: documentation/
 layout: "layouts/main.njk"
 eleventyNavigation:
-  key: Documentation
+    key: Documentation
 ---
+
 # Documentation
 
 The goal with Elf is to make 11ty projects that your customers can run themselves. This documentation is here to help both customers and developers.
@@ -34,7 +35,7 @@ The folder structure is:
     - `_data`; used for global data files
     - `_includes`; mainly templates for the pages and some building blocks
     - `assets`; things that’ll be included in the pages: css, fonts, images, icons, js, etc.
-    - `root`;  where the main pages live
+    - `root`; where the main pages live
 
 ## Included filters
 

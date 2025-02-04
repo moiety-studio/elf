@@ -22,7 +22,11 @@ body {
     line-height: 1.5;
     font-size: 1.25rem;
     background: var(--background);
-    background-image: linear-gradient(to bottom, var(--background), hsl(from var(--background) h s calc(l - 7)));
+    background-image: linear-gradient(
+        to bottom,
+        var(--background),
+        hsl(from var(--background) h s calc(l - 7))
+    );
     background-size: 100% 400px;
     background-position-y: bottom;
     background-repeat: no-repeat;
