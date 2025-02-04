@@ -24,12 +24,20 @@ export default function (eleventyConfig) {
     // JS processing --------------------
     eleventyConfig.addTemplateFormats("js")
     eleventyConfig.addExtension("js", {
-        outputFileExtension: "min.js",
         compile: async (content, path) => {
             return async () => {
                 let output = await minify(content, {})
 
                 return output.code
+            }
+        },
+        compileOptions: {
+            permalink: function (contents, inputPath) {
+                // NOTE: is there a better way to change the extension?
+                inputPath = inputPath.replace("_source/theme/js/", "/assets/")
+                inputPath = inputPath.replace(".js", ".min.js")
+
+                return inputPath
             }
         }
     })
@@ -39,7 +47,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addExtension("css", {
         outputFileExtension: "min.css",
         compile: async (content, path) => {
-            if (path !== "./_source/assets/core.css") {
+            if (path !== "./_source/theme/css/_core.css") {
                 return
             }
 
@@ -60,14 +68,15 @@ export default function (eleventyConfig) {
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`)
 
     // Passthrough ----------------------
-    eleventyConfig.addPassthroughCopy("_source/assets/icons/")
-    eleventyConfig.addPassthroughCopy("_source/assets/images/")
-    eleventyConfig.addPassthroughCopy("_source/assets/fonts/")
+    eleventyConfig.addPassthroughCopy({ "./_source/theme/assets": "/assets" })
 
     // 11ty Settings --------------------
     return {
         dir: {
-            input: "_source"
+            input: "_source",
+            data: "_data",
+            includes: "/theme/_includes",
+            layouts: "/theme/_layouts"
         },
         dataTemplateEngine: "njk",
         markdownTemplateEngine: "njk"

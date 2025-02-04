@@ -1,0 +1,35 @@
+---
+permalink: /assets/core.min.css
+---
+
+/*!
+Theme Name: Elf
+Theme URL: https://elf.moiety.studio
+Author : Moiety Studio
+Author URL: https://moiety.studio
+Description: Bespoke theme designed by Moiety Studio for Elf, 2024
+License: CC BY 4.0 
+*/
+
+/* Base */
+@import url("_config");
+@import url("basics");
+@import url("utilities");
+
+/* Layout */
+@import url("layout");
+@import url("header");
+@import url("footer");
+
+/* Typography */
+@import url("typography");
+@import url("skiplink");
+
+/* Components */
+@import url("buttons");
+@import url("navigation");
+@import url("logo");
+@import url("theme-switcher");
+
+/* Pages */
+@import url("pages/home");

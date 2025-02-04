@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: about/
-layout: "layouts/main.njk"
+layout: "main.njk"
 eleventyNavigation:
     key: About
 ---

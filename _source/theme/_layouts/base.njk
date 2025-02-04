@@ -16,9 +16,9 @@
         <script src="/assets/inline.min.js"></script>
     </head>
     <body class="{{ classNames }}">
-        {% include "partials/header.njk" %}
+        {% include "header.njk" %}
         {{ content | safe }}
-        {% include "partials/footer.njk" %}
+        {% include "footer.njk" %}
         <script src="/assets/app.min.js" type="module"></script>
     </body>
 </html>

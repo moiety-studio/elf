@@ -1,7 +1,7 @@
 ---
 title: Documentation
 permalink: documentation/
-layout: "layouts/main.njk"
+layout: "main.njk"
 eleventyNavigation:
     key: Documentation
 ---
