@@ -7,7 +7,9 @@
     "clean": "npx del _site",
     "serve": "eleventy --serve",
     "start": "npm run serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "prettier": "npx prettier . --write",
+    "prettier:check": "npx prettier . --check"
   },
   "keywords": [],
   "author": {
@@ -25,6 +27,8 @@
     "postcss": "^8.5.1",
     "postcss-import": "^16.1.0",
     "postcss-minify": "^1.1.0",
+    "prettier": "3.4.2",
+    "prettier-plugin-jinja-template": "^2.0.0",
     "terser": "^5.37.0"
   }
 }
