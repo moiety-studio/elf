@@ -4,7 +4,7 @@ People are awesome. People are awesome in different ways. We would like people t
 
 To get into more specifics, this means we do not tolerate any harassment or disrespect of our employees or customers due to age, body size, disability, ethnicity, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-This Code of Conduct covers all activities of related to Elf.
+This Code of Conduct covers all activities related to Elf.
 
 ## Team
 
