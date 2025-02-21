@@ -24,7 +24,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "del-cli": "^6.0.0",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.2",
     "postcss-import": "^16.1.0",
     "postcss-minify": "^1.1.0",
     "prettier": "3.4.2",
