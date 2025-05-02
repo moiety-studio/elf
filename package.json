@@ -22,7 +22,7 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-navigation": "^1.0.4",
     "del-cli": "^6.0.0",
     "postcss": "^8.5.3",
     "postcss-import": "^16.1.0",
