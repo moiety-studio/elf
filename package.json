@@ -21,7 +21,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.0",
     "@11ty/eleventy-navigation": "^1.0.4",
     "del-cli": "^6.0.0",
     "postcss": "^8.5.3",
