@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 0.10.0 - 2025-05-30
+
+### Changed
+
+- Updated 11ty from 3.0.0 to 3.1.0
+- Updated dependencies
+- Changed the project folder structure (idea is to create a clearer separation between content and Elf related file)
+
 ## 0.9.0 - 2025-02-04
 
 ### Added
