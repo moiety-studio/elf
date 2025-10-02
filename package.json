@@ -29,7 +29,7 @@
     "postcss-import": "^16.1.0",
     "postcss-minify": "^1.1.0",
     "prettier": "3.4.2",
-    "prettier-plugin-jinja-template": "^2.0.0",
+    "prettier-plugin-jinja-template": "^2.1.0",
     "terser": "^5.39.0"
   }
 }
